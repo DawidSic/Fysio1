@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fysio1</title>
+    <script src="https://kit.fontawesome.com/5c49569796.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <button class="burger-btn">
+        <div class="burger-btn__box">
+            <div class="burger-btn__bars"></div>
+        </div>
+    </button>
+
+    <nav class="nav">
+
+
+        <ul class="nav-list">
+            <li><a class="nav-item" href="#">Hjem</a></li>
+            <li><a class="nav-item" href="#services">Behandlingar</a></li>
+            <li><a class="nav-item" href="#therapists">Terapeutar</a></li>
+            <li><a class="nav-item" href="#appointment">Time bestilling</a></li>
+            <li><a class="nav-item" href="#contact">Kontakt oss</a></li>
+        </ul>
+        <div class="logo"></div>
+
+    </nav>
+
+    <nav class="nav-desktop">
+        <div class="logo-desktop"></div>
+        <ul>
+            <li><a href="#">Hjem</a></li>
+            <li><a href="#services">Behandlingar</a></li>
+            <li><a href="#therapists">Terapeutar</a></li>
+            <li><a href="#appointment">Time bestilling</a></li>
+            <li><a class="contact-button" href="#contact">Kontakt oss</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero-main">
+
+            <div class="hero">
+
+                <div class="hero-img"></div>
+                <div class="hero-shadow"></div>
+
+            </div>
+            <div class="container">
+                <h2 class="hero-heading">Velkommen til Fysio 1 i Helsehuset Ørsta</h2>
+                <h1 class="hero-heading-mid">saman kan vi nå måla dine!</h1>
+                <h2 class="hero-heading second mobile">Har du smerter, stivheit eller treng rehabilitering etter skade?
+                    <br><br>
+                    Lat oss gjere kvardagen enklare for deg!
+                </h2>
+                <h2 class="hero-heading second desktop">Har du smerter, stivheit eller treng rehabilitering etter skade?
+                    Vi hjelper deg på vegen til ein sterkare og meir rørleg kropp, med tilpassa behandling for dine
+                    behov. Lat oss gjere kvardagen enklare for deg.
+                </h2>
+
+
+                <div class="cta-container">
+                    <a href="#appointment" class="cta">
+                        <span class="cta-text">Bestill Time</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+        <section class="info">
+            <img class="logo-second" src="./img/Mova logo lilla_edited.avif" alt="Mova logo">
+
+            <div class="info-background-box"></div>
+            <div class="info-box">
+                <div class="info-text">
+                    <p>Vår filosofi i Fysio1 er at pasientane skal oppleve god og effektiv hjelp i samråd med våre
+                        terapeutar. Vi har fokus på at den enkelte skal få innsikt i sine plager og lære korleis dei
+                        sjølve
+                        kan bidra til betring under eit rehabiliteringsforløp. Dette medfører ofte treningsopplegg i
+                        tillegg
+                        til eventuell behandling. <br><br>
+                        Vi samarbeidar tett med fastlege, arbeidsgivar og i tillegg er me tilknytt dei fleste
+                        forsikringsselskapa som formidlar behandlingsforsikring. Alle våre terapeutar er tilknytt Norsk
+                        Helsenett, noko som gjer at me kan kommunisere med helseinstitusjonar som sjukehus og legekontor
+                        online.</p>
+                </div>
+            </div>
+            <img class="logo-first" src="./img/Norsk-Helsenett.jpg" alt="Norsk helsenett logo">
+
+        </section>
+        <section class="mid-section">
+
+            <div class="image-box"><a href="#services" class="services-button">Les meir om våre behandlingar</a></div>
+
+        </section>
+        <section class="contact" id="contact">
+            <div class="contact-container">
+
+
+                <p class="main">Opningstider klinikk:</p>
+                <p class="main-text">Måndag-Fredag 08:00-16:30</p>
+                <br>
+                <p class="main">Telefon:</p>
+                <p class="main-text">700 68 100</p>
+                <br>
+                <p class="main">Administrasjon:</p>
+                <p class="main-text">980 72 439</p>
+
+                <div class="contact-app-button"><a href="#appointment">Bestill time online</a></div>
+                <p class="main">NB!</p>
+                <p class="main-text warning">For refusjonsbehandling ta kontakt <br> per telefon då venteliste kan
+                    forekome.</p>
+
+            </div>
+            <div class="form-container">
+                <p class="contact-text">Ta kontakt med oss på e-post: post@fysio1.no <br>
+                    eller ved å bruke skjema under.</p>
+                <form action="mail.php" method="post" class="contact__form">
+
+                    <div class="contact__form-top">
+
+                        <label for="name" class="contact__form-label">Namn:</label>
+                        <input type="text" class="contact__form-input" id="name" name="name" required>
+
+                        <label for="email" class="contact__form-label">E-mail:</label>
+                        <input type="text" id="email" name="email" class="contact__form-input" required>
+
+                        <label for="msg" class="contact__form-label msg">Melding:</label>
+                        <textarea id="msg" name="msg" class="contact__form-textarea txet" required></textarea>
+                    </div>
+
+
+                    <button type="submit" class="contact__form-btn">SEND</button>
+
+
+                </form>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <section class="footer">
+            <div class="logo"></div>
+            <p class="desktop-adr">Post- og besøksadresse: <br>
+                Fysio1 AS, Strandgata 4, 6150 ØRSTA</p> <i class="fa-brands fa-square-facebook"></i>
+            <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Fysio1. Utviklet av <a
+                    href="https://dawdev.com/">DawDev</a>.</p>
+        </section>
+
+    </footer>
+
+
+</body>
+<script src="./js/script.js"></script>
+
+</html>
