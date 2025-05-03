@@ -170,7 +170,7 @@ body {
   height: 80px;
   width: 200px;
   border-radius: 20px;
-  background-image: url("/img/Logo.jpeg");
+  background-image: url("../img/Logo.jpeg");
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: left;
@@ -193,7 +193,7 @@ body {
   height: 80px;
   width: 300px;
   border-radius: 20px;
-  background-image: url("/img/Logo.jpeg");
+  background-image: url("../img/Logo.jpeg");
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: left;
@@ -246,7 +246,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/img/960x0.webp");
+  background-image: url("../img/960x0.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -265,7 +265,7 @@ body {
   position: absolute;
   bottom: 6%;
   right: 0;
-  background-image: url("/img/artikkel-fysioterapi-1.webp");
+  background-image: url("../img/artikkel-fysioterapi-1.webp");
   background-position: center;
   background-size: cover;
   width: 70%;
@@ -297,7 +297,7 @@ body {
 .mid-section .image-box {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/img/Does-Physical-Therapy-Actually-Work.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/Does-Physical-Therapy-Actually-Work.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
