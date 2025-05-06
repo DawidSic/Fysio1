@@ -492,9 +492,11 @@ body {
   margin-right: 2em;
   border-radius: 80px;
   line-height: 2;
+  max-width: 366px;
   padding: 40px 40px;
   background-color: #8ce1ab;
   box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2em;
 }
 .services-box .services-box-heading h3 {
   font-weight: 500;
@@ -506,6 +508,46 @@ body {
 }
 .services-box .second-heading {
   margin-top: 1em;
+}
+
+.services-container {
+  position: relative;
+  top: 60px;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #8ce1ab;
+}
+.services-container .service {
+  display: inline-block;
+  min-width: 100%;
+  margin-bottom: 1em;
+  background-color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+.services-container .service h3 {
+  position: relative;
+  padding: 20px 20px 0px 20px;
+}
+.services-container .service h3 .arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+}
+.services-container .service p {
+  padding-top: 10px;
+}
+.services-container .service-one {
+  margin-top: 2em;
+}
+.services-container .service-one .service-text-one {
+  display: none;
+}
+
+.show-text {
+  display: inline;
 }
 
 @media (min-width: 1200px) {
@@ -631,6 +673,26 @@ body {
     color: rgb(6, 208, 208);
     text-decoration: none;
     font-weight: 400;
+  }
+  .services {
+    display: flex;
+    justify-content: center;
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+  .services .services-text {
+    margin-top: 4em;
+    width: 50%;
+    font-size: 2.2rem;
+  }
+  .services .services-box {
+    font-size: 1.9rem;
+    margin-top: 2em;
+    max-width: 100%;
+    border-radius: 50px 0 50px 50px;
+  }
+  .services .services-box .services-box-heading h3 {
+    font-size: 2rem;
   }
 }
 @media (min-width: 1405px) {
