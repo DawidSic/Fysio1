@@ -523,6 +523,7 @@ body {
 	padding-left: 2em;
 	padding-right: 2em;
 	background-color: c.$box-main-desktop;
+	margin-bottom: 60px;
 	.service {
 		display: inline-block;
 		min-width: 100%;
@@ -541,8 +542,11 @@ body {
 				font-size: 2rem;
 			}
 		}
+		
+
 		p {
-			padding-top: 10px;
+			margin-top: 50px;
+			display: none;
 		}
 	}
 	.service-one {
@@ -551,9 +555,9 @@ body {
 			display: none;
 		}
 	}
-}
-.show-text {
-	display: inline;
+	.service-three {
+		margin-bottom: 2em;
+	}
 }
 
 // MEDIA

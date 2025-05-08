@@ -516,6 +516,7 @@ body {
   padding-left: 2em;
   padding-right: 2em;
   background-color: #8ce1ab;
+  margin-bottom: 60px;
 }
 .services-container .service {
   display: inline-block;
@@ -537,7 +538,8 @@ body {
   font-size: 2rem;
 }
 .services-container .service p {
-  padding-top: 10px;
+  margin-top: 50px;
+  display: none;
 }
 .services-container .service-one {
   margin-top: 2em;
@@ -545,9 +547,8 @@ body {
 .services-container .service-one .service-text-one {
   display: none;
 }
-
-.show-text {
-  display: inline;
+.services-container .service-three {
+  margin-bottom: 2em;
 }
 
 @media (min-width: 1200px) {
