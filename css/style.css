@@ -453,6 +453,7 @@ body {
   top: 60px;
   width: 100%;
   height: 120px;
+  margin-bottom: 60px;
 }
 .top-section .top-section-shadow {
   position: absolute;
@@ -478,16 +479,17 @@ body {
   color: #fff;
   z-index: 10;
 }
+.top-section .therapists {
+  background-image: url("../img/therapists.png");
+  background-position: center -30px;
+}
 
 .services-text {
-  position: relative;
-  top: 60px;
   margin: 2em;
+  padding-top: 2em;
 }
 
 .services-box {
-  position: relative;
-  top: 60px;
   margin-left: 2em;
   margin-right: 2em;
   border-radius: 80px;
@@ -511,21 +513,19 @@ body {
 }
 
 .services-container {
-  position: relative;
-  top: 60px;
   padding-left: 2em;
   padding-right: 2em;
   background-color: #8ce1ab;
-  margin-bottom: 60px;
 }
 .services-container .service {
   display: inline-block;
   min-width: 100%;
   margin-bottom: 1em;
   background-color: #fff;
+  transition: all 0.8s ease-out;
   border-radius: 50px;
   text-align: center;
-  padding: 0 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
 }
 .services-container .service h3 {
   position: relative;
@@ -549,6 +549,81 @@ body {
 }
 .services-container .service-three {
   margin-bottom: 2em;
+}
+
+.boxes-container {
+  margin: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.boxes-container .box {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 0;
+  margin-bottom: 1.5em;
+  background-color: #8ce1ab;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.boxes-container .box .box-face {
+  position: absolute;
+  width: 28%;
+  height: 100%;
+  border-radius: 20px;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.boxes-container .box .box-text-container {
+  width: 73%;
+  text-align: center;
+}
+.boxes-container .box .box-text-container .box-heading,
+.boxes-container .box .box-text-container .box-text {
+  padding-bottom: 0.5em;
+}
+.boxes-container .box .box-text-container .first span {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.boxes-container .box .box-buttons {
+  padding-top: 0.5em;
+}
+.boxes-container .box .box-buttons button {
+  border-radius: 20px;
+  border: 2px solid white;
+  padding: 4px 15px;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+}
+.boxes-container .box .box-buttons .button1 {
+  margin-right: 0.5em;
+  background-color: #8ce1ab;
+}
+.boxes-container .box .box-buttons .button2 {
+  margin-left: 0.5em;
+  background-color: #fff;
+}
+.boxes-container .box .face1 {
+  background-image: url("../img/TS.png");
+}
+.boxes-container .box .face2 {
+  background-image: url("../img/FF.png");
+}
+.boxes-container .box .face3 {
+  background-image: url("../img/ET.png");
+}
+.boxes-container .box .face4 {
+  background-image: url("../img/GA.png");
+}
+.boxes-container .box-2,
+.boxes-container .box-4 {
+  background-color: #7fcf9c;
 }
 
 @media (min-width: 1200px) {
@@ -678,8 +753,7 @@ body {
   .services {
     display: flex;
     justify-content: center;
-    margin-left: 6em;
-    margin-right: 6em;
+    flex-wrap: wrap;
   }
   .services .services-text {
     margin-top: 4em;
@@ -694,6 +768,10 @@ body {
   }
   .services .services-box .services-box-heading h3 {
     font-size: 2rem;
+  }
+  .services .services-container {
+    width: 100%;
+    padding: 0 12em;
   }
 }
 @media (min-width: 1405px) {

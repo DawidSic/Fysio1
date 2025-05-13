@@ -459,6 +459,7 @@ body {
 	top: 60px;
 	width: 100%;
 	height: 120px;
+	margin-bottom: 60px;
 	.top-section-shadow {
 		position: absolute;
 		border-radius: 0 0 20px 20px;
@@ -483,16 +484,17 @@ body {
 			z-index: 10;
 		}
 	}
+	.therapists {
+		background-image: url('../img/therapists.png');
+		background-position: center -30px;
+	}
 }
 .services-text {
-	position: relative;
-	top: 60px;
 	margin: 2em;
+	padding-top: 2em;
 }
 
 .services-box {
-	position: relative;
-	top: 60px;
 	margin-left: 2em;
 	margin-right: 2em;
 	border-radius: 80px;
@@ -518,20 +520,18 @@ body {
 }
 
 .services-container {
-	position: relative;
-	top: 60px;
 	padding-left: 2em;
 	padding-right: 2em;
 	background-color: c.$box-main-desktop;
-	margin-bottom: 60px;
 	.service {
 		display: inline-block;
 		min-width: 100%;
 		margin-bottom: 1em;
 		background-color: c.$pure-white;
+		transition: all 0.8s ease-out;
 		border-radius: 50px;
 		text-align: center;
-		padding: 0 20px 20px 20px;
+		padding: 0px 20px 20px 20px;
 		h3 {
 			position: relative;
 			padding: 20px 20px 0px 20px;
@@ -542,7 +542,6 @@ body {
 				font-size: 2rem;
 			}
 		}
-		
 
 		p {
 			margin-top: 50px;
@@ -557,6 +556,84 @@ body {
 	}
 	.service-three {
 		margin-bottom: 2em;
+	}
+}
+
+// Terapeutar
+.boxes-container {
+	margin: 0 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.box {
+		position: relative;
+		width: 100%;
+		border-radius: 20px;
+		padding: 10px 0;
+		margin-bottom: 1.5em;
+		background-color: c.$box-main-desktop;
+		box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		.box-face {
+			position: absolute;
+			width: 28%;
+			height: 100%;
+			border-radius: 20px;
+			left: 0;
+			top: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.box-text-container {
+			width: 73%;
+			text-align: center;
+			.box-heading,
+			.box-text {
+				padding-bottom: 0.5em;
+			}
+			.first {
+				span {
+					font-size: 1.2rem;
+					font-weight: normal;
+				}
+			}
+		}
+		.box-buttons {
+			padding-top: 0.5em;
+			button {
+				border-radius: 20px;
+				border: 2px solid white;
+				padding: 4px 15px;
+				box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+			}
+			.button1 {
+				margin-right: 0.5em;
+				background-color: c.$box-main-desktop;
+			}
+			.button2 {
+				margin-left: 0.5em;
+				background-color: c.$pure-white;
+			}
+		}
+		.face1 {
+			background-image: url('../img/TS.png');
+		}
+		.face2 {
+			background-image: url('../img/FF.png');
+		}
+		.face3 {
+			background-image: url('../img/ET.png');
+		}
+		.face4 {
+			background-image: url('../img/GA.png');
+		}
+	}
+	.box-2,
+	.box-4 {
+		background-color: c.$box-main-darker;
 	}
 }
 
@@ -705,8 +782,9 @@ body {
 	.services {
 		display: flex;
 		justify-content: center;
-		margin-left: 6em;
-		margin-right: 6em;
+		flex-wrap: wrap;
+		// margin-left: 6em;
+		// margin-right: 6em;
 		.services-text {
 			margin-top: 4em;
 			width: 50%;
@@ -722,6 +800,10 @@ body {
 					font-size: 2rem;
 				}
 			}
+		}
+		.services-container {
+			width: 100%;
+			padding: 0 12em;
 		}
 	}
 }
