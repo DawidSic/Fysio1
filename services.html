@@ -49,7 +49,7 @@
     <div class="top-section">
 
         <div class="top-section-shadow"></div>
-        <div class="top-section-img">
+        <div class="top-section-img services-img">
             <h2 class="top-section-heading">BEHANDLINGAR</h2>
         </div>
 
@@ -90,17 +90,20 @@
         <div class="services-container">
 
             <div class="service service-one">
-                <h3>Fysioterapi <i class="fa-solid fa-chevron-down arrow"></i></h3>
-                <p class="service-text-one">Fysioterapi er eit sjølvstendig teoretisk og praktisk helsefag. Offentlig
+                <h3>Fysioterapi <button class="arrow-toggle" aria-expanded="false" aria-controls="service-text-one"><i
+                            class="fa-solid fa-chevron-down arrow"></i></button></h3>
+                <p class="service-text-one service-text" id="service-text-one">Fysioterapi er eit sjølvstendig teoretisk
+                    og praktisk
+                    helsefag. Offentlig
                     autorisasjon er
                     nødvendig for å kunne arbeide som fysioterapeut. Fysioterapi er et lovfestet tilbod innan norsk
                     helseteneste.
                     Fysioterapi omfatter helsefremjande og førebyggjande arbeid.
-
+                    <br><br>
                     Gjennom trening, rettleiing og behandling er målet å betre tilværet for menneske med sjukdom og
                     funksjonssvikt. Fysioterapi tar utgangspunkt i menneskets ressurser og stimulerer til ansvar og
                     eigenmeistring.
-
+                    <br><br>
                     Med bakgrunn i undersøkinga og gjennom klinisk resonnement utarbeider fysioterapeuten, i samråd
                     med pasient eller bruker, eventuelt pårørende, mål og tiltaksplan.
                     Tiltak kan mellom anna omfatte øvelsesterapi,slyngeterapi, trening, elektroterapi, behandling på
@@ -108,8 +111,11 @@
                 </p>
             </div>
             <div class="service service-two">
-                <h3>Manuellterapi<i class="fa-solid fa-chevron-down arrow"></i></h3>
-                <p>Fysioterapi er eit sjølvstendig teoretisk og praktisk helsefag. Offentlig autorisasjon er
+                <h3>Manuellterapi<button class="arrow-toggle" aria-expanded="false" aria-controls="service-text-two"><i
+                            class="fa-solid fa-chevron-down arrow"></i></button></h3>
+                <p class="service-text-two service-text" id="service-text-two">Fysioterapi er eit sjølvstendig teoretisk
+                    og praktisk
+                    helsefag. Offentlig autorisasjon er
                     nødvendig for å kunne arbeide som fysioterapeut. Fysioterapi er et lovfestet tilbod innan norsk
                     helseteneste.
                     Fysioterapi omfatter helsefremjande og førebyggjande arbeid.
@@ -125,8 +131,10 @@
                 </p>
             </div>
             <div class="service service-three">
-                <h3>Osteopati<i class="fa-solid fa-chevron-down arrow"></i></h3>
-                <p>Fysioterapi er eit sjølvstendig teoretisk og praktisk helsefag. Offentlig autorisasjon er
+                <h3>Osteopati<button class="arrow-toggle" aria-expanded="false" aria-controls="service-text-three"><i
+                            class="fa-solid fa-chevron-down arrow"></i></button></h3>
+                <p class="service-text-three service-text" id="service-text-three">Fysioterapi er eit sjølvstendig
+                    teoretisk og praktisk helsefag. Offentlig autorisasjon er
                     nødvendig for å kunne arbeide som fysioterapeut. Fysioterapi er et lovfestet tilbod innan norsk
                     helseteneste.
                     Fysioterapi omfatter helsefremjande og førebyggjande arbeid.
@@ -147,7 +155,65 @@
 
     </section>
 
+    <section class="contact" id="contact">
+        <div class="contact-container services-contact">
+
+
+            <p class="main">Opningstider klinikk:</p>
+            <p class="main-text">Måndag-Fredag 08:00-16:30</p>
+            <br>
+            <p class="main">Telefon:</p>
+            <p class="main-text">700 68 100</p>
+            <br>
+            <p class="main">Administrasjon:</p>
+            <p class="main-text">980 72 439</p>
+
+            <div class="contact-app-button"><a href="#appointment">Bestill time online</a></div>
+            <p class="main">NB!</p>
+            <p class="main-text warning">For refusjonsbehandling ta kontakt <br> per telefon då venteliste kan
+                forekome.</p>
+
+        </div>
+        <div class="form-container">
+            <p class="contact-text">Ta kontakt med oss på e-post: post@fysio1.no <br>
+                eller ved å bruke skjema under.</p>
+            <form action="mail.php" method="post" class="contact__form">
+
+                <div class="contact__form-top">
+
+                    <label for="name" class="contact__form-label">Namn:</label>
+                    <input type="text" class="contact__form-input" id="name" name="name" required>
+
+                    <label for="email" class="contact__form-label">E-mail:</label>
+                    <input type="text" id="email" name="email" class="contact__form-input" required>
+
+                    <label for="msg" class="contact__form-label msg">Melding:</label>
+                    <textarea id="msg" name="msg" class="contact__form-textarea txet" required></textarea>
+                </div>
+
+
+                <button type="submit" class="contact__form-btn">SEND</button>
+
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <section class="footer">
+            <div class="logo"></div>
+            <p class="desktop-adr">Post- og besøksadresse: <br>
+                Fysio1 AS, Strandgata 4, 6150 ØRSTA</p> <i class="fa-brands fa-square-facebook"></i>
+            <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Fysio1. Utviklet av <a
+                    href="https://dawdev.com/">DawDev</a>.</p>
+        </section>
+
+    </footer>
 </body>
-<script src="./js/script.js"></script>
+<script src="/js/script.js"></script>
 
 </html>

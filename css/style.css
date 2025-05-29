@@ -465,7 +465,6 @@ body {
   border-radius: 0 0 20px 20px;
   width: 100%;
   height: 100%;
-  background-image: url("../img/top-section-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -477,6 +476,9 @@ body {
   line-height: 140px;
   color: #fff;
   z-index: 10;
+}
+.top-section .services-img {
+  background-image: url("../img/top-section-1.jpeg");
 }
 
 .services-text {
@@ -519,12 +521,12 @@ body {
 }
 .services-container .service {
   display: inline-block;
-  min-width: 100%;
+  width: 100%;
   margin-bottom: 1em;
   background-color: #fff;
   border-radius: 50px;
   text-align: center;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 10px 20px;
 }
 .services-container .service h3 {
   position: relative;
@@ -535,6 +537,15 @@ body {
   top: 20px;
   right: 20px;
   font-size: 2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.services-container .service h3 .arrow.rotated {
+  transform: rotate(-180deg);
+}
+.services-container .service h3 .arrow-toggle {
+  background: none;
+  border: none;
 }
 .services-container .service p {
   padding-top: 10px;
@@ -542,14 +553,198 @@ body {
 .services-container .service-one {
   margin-top: 2em;
 }
-.services-container .service-one .service-text-one {
-  display: none;
+.services-container .service-three {
+  margin-bottom: 2em;
+}
+.services-container .service-text {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  transition: max-height 0.6s ease-in-out, opacity 0.5s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+}
+.services-container .service-text.visible {
+  max-height: 1000px; /* high enough to fit the content */
+  opacity: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.show-text {
-  display: inline;
+.services-contact {
+  padding-top: 2em;
 }
 
+.therapists-img {
+  background-image: url("../img/therapists.png");
+}
+
+.therapists {
+  margin: 6em 1em 2em 1em;
+  /* hide front content visually */
+}
+.therapists .therapists-text {
+  text-align: center;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+.therapists .therapists-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  max-width: calc(1200px + 2rem); /* limit to 2 cards + gap */
+  margin: 0 auto;
+}
+.therapists .therapists-container .therapists-card {
+  background-color: #8ce1ab;
+  border: 3px solid #8ce1ab;
+  flex: 1 1 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease, scale 0.2s ease;
+  perspective: 1000px;
+  position: relative;
+}
+.therapists .therapists-container .therapists-card .card-img {
+  width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: 1px center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+.therapists .therapists-container .therapists-card .img-one {
+  background-image: url("../img/img-one.png");
+}
+.therapists .therapists-container .therapists-card .img-two {
+  background-image: url("../img/img-two.png");
+}
+.therapists .therapists-container .therapists-card .img-three {
+  background-image: url("../img/img-three.png");
+}
+.therapists .therapists-container .therapists-card .img-four {
+  background-image: url("../img/img-four.png");
+}
+.therapists .therapists-container .therapists-card .card-header,
+.therapists .therapists-container .therapists-card .card-text {
+  padding: 1rem;
+  text-align: center;
+}
+.therapists .therapists-container .therapists-card .card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+.therapists .therapists-container .therapists-card .card-buttons .card-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+}
+.therapists .therapists-container .therapists-card .card-buttons .button-about {
+  background-color: #8ce1ab;
+  border: 2px solid white;
+}
+.therapists .therapists-container .therapists-card .card-buttons .button-contact {
+  background-color: #fff;
+}
+.therapists .therapists-container .therapists-card .card-buttons .button-about:hover {
+  background-color: #fff;
+}
+.therapists .therapists-container .therapists-card .card-buttons .button-contact:hover {
+  border: 2px solid black;
+}
+.therapists .therapists-container .therapists-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.therapists .therapists-container .therapists-card:hover {
+  transform: translateY(0) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.therapists .card-info {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  line-height: 1.2;
+}
+.therapists .card-info .info-heading {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.therapists .card-info .first-par {
+  margin-bottom: 1em;
+}
+.therapists .therapists-card {
+  position: relative;
+  overflow: hidden;
+}
+.therapists .therapists-card.show-info .card-info {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+.therapists .therapists-card.show-info > .card-img,
+.therapists .therapists-card.show-info > .card-header,
+.therapists .therapists-card.show-info > .card-text,
+.therapists .therapists-card.show-info > .card-buttons {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+@media (min-width: 700px) {
+  .therapists-card {
+    flex: 1 1 calc(50% - 2rem); /* minus gap */
+  }
+}
+@media (min-width: 768px) {
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .services .services-text {
+    max-width: 40%;
+    font-size: 1.8rem;
+  }
+  .services .services-box {
+    margin-top: 2em;
+    width: 40%;
+  }
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services-container .service {
+    width: 70%;
+  }
+}
 @media (min-width: 1200px) {
   .nav {
     display: none;
@@ -598,23 +793,23 @@ body {
     letter-spacing: 1px;
   }
   .info .info-box {
-    top: 15%;
-    left: 22em;
-    width: 30%;
-    height: 70%;
+    top: 20%;
+    left: 10em;
+    width: 40%;
+    height: 60%;
     border-radius: 30px;
     box-shadow: 1px 3px rgba(0, 0, 0, 0.1);
     padding: 55px;
     background-color: #8ce1ab;
   }
   .info .info-box .info-text {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   .info .info-background-box {
-    right: 22em;
-    bottom: 8%;
-    height: 85%;
-    width: 35%;
+    right: 10em;
+    bottom: 13%;
+    height: 75%;
+    width: 40%;
     border-radius: 100px 0 100px 100px;
     box-shadow: 0px 3px rgba(0, 0, 0, 0.1);
   }
@@ -674,29 +869,91 @@ body {
     text-decoration: none;
     font-weight: 400;
   }
+  .top-section {
+    height: 200px;
+  }
+  .top-section .top-section-img .top-section-heading {
+    line-height: 200px;
+    font-size: 3.5rem;
+  }
   .services {
     display: flex;
-    justify-content: center;
-    margin-left: 6em;
-    margin-right: 6em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 6em;
   }
   .services .services-text {
-    margin-top: 4em;
-    width: 50%;
+    max-width: 45%;
     font-size: 2.2rem;
   }
   .services .services-box {
     font-size: 1.9rem;
-    margin-top: 2em;
-    max-width: 100%;
+    max-width: 400px;
     border-radius: 50px 0 50px 50px;
   }
   .services .services-box .services-box-heading h3 {
     font-size: 2rem;
   }
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services-container .service {
+    width: 60%;
+  }
+  .services-container .service h3 {
+    font-size: 2.2rem;
+  }
+  .services-container .service p {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 1405px) {
   .nav-desktop ul li a {
+    font-size: 2.3rem;
+  }
+  .info .info-box .info-text {
+    font-size: 2.1rem;
+  }
+  .services .services-text {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1600px) {
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .info .info-background-box {
+    position: relative;
+    order: 2;
+    bottom: auto;
+    right: 1em;
+    height: 85%;
+    width: 35%;
+    max-height: 823px;
+    max-width: 579px;
+    border-radius: 100px 0 100px 100px;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.1);
+  }
+  .info .info-box {
+    position: relative;
+    order: 1;
+    top: auto;
+    left: 1em;
+    width: 35%;
+    height: 70%;
+    max-width: 600px;
+    max-height: 700px;
+    border-radius: 30px;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 55px;
+    background-color: #8ce1ab;
+    z-index: 1;
+  }
+  .info .info-box .info-text {
     font-size: 2.3rem;
   }
 }/*# sourceMappingURL=style.css.map */
