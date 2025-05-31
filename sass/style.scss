@@ -177,6 +177,7 @@ body {
 	background-size: 200px;
 	background-repeat: no-repeat;
 	background-position: left;
+	z-index: 1000;
 }
 
 .nav-desktop {
@@ -199,6 +200,7 @@ body {
 		background-size: 200px;
 		background-repeat: no-repeat;
 		background-position: left;
+		z-index: 1000;
 	}
 	ul {
 		display: flex;
@@ -479,7 +481,6 @@ body {
 			text-align: center;
 			line-height: 140px;
 			color: c.$pure-white;
-			z-index: 10;
 		}
 	}
 	.services-img {

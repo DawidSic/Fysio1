@@ -21,31 +21,7 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 
-navBtn.addEventListener('click', handleNav)
-
-// document.addEventListener('DOMContentLoaded', function () {
-// 	const serviceBlocks = document.querySelectorAll('.service')
-
-// 	serviceBlocks.forEach(service => {
-// 		const button = service.querySelector('.arrow-toggle')
-// 		const contentId = button.getAttribute('aria-controls')
-// 		const content = document.getElementById(contentId)
-// 		const arrow = button.querySelector('.arrow')
-
-// 		service.addEventListener('click', function () {
-// 			const isExpanded = button.getAttribute('aria-expanded') === 'true'
-
-// 			// Toggle visibility class
-// 			content.classList.toggle('visible', !isExpanded)
-
-// 			// Toggle arrow rotation
-// 			arrow.classList.toggle('rotated', !isExpanded)
-
-// 			// Update aria-expanded
-// 			button.setAttribute('aria-expanded', (!isExpanded).toString())
-// 		})
-// 	})
-// })
+navBtn.addEventListener('click', handleNav);
 
 document.addEventListener('DOMContentLoaded', function () {
 	const serviceBlocks = document.querySelectorAll('.service')
@@ -97,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		})
 	})
-})
+});
 
-const cards = document.querySelectorAll('.therapists-card')
+const cards = document.querySelectorAll('.therapists-card');
 
 const observer = new IntersectionObserver(
 	entries => {
@@ -111,9 +87,9 @@ const observer = new IntersectionObserver(
 		})
 	},
 	{ threshold: 0.1 }
-)
+);
 
-cards.forEach(card => observer.observe(card))
+cards.forEach(card => observer.observe(card));
 
 document.querySelectorAll('.therapists-card').forEach(card => {
 	const aboutBtn = card.querySelector('.button-about')
