@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fysio1 Behandlingar</title>
     <script src="https://kit.fontawesome.com/5c49569796.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,44 +26,48 @@
 
 
         <ul class="nav-list">
-            <li><a class="nav-item" href="index.html">Hjem</a></li>
-            <li><a class="nav-item" href="services.html">Behandlingar</a></li>
-            <li><a class="nav-item" href="therapists.html">Terapeutar</a></li>
-            <li><a class="nav-item" href="#appointment">Time bestilling</a></li>
+            <li><a class="nav-item" href="/">Hjem</a></li>
+            <li><a class="nav-item" href="/Behandlingar">Behandlingar</a></li>
+            <li><a class="nav-item" href="/Terapeutar">Terapeutar</a></li>
+            <li><a class="nav-item" href="/Time-bestilling">Time bestilling</a></li>
             <li><a class="nav-item" href="#contact">Kontakt oss</a></li>
         </ul>
-        <a href="index.html">
+        <a href="/">
             <div class="logo"></div>
         </a>
 
     </nav>
 
     <nav class="nav-desktop">
-        <a href="index.html">
+        <a href="/" class="logo-home">
             <div class="logo-desktop"></div>
         </a>
         <ul>
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="services.html">Behandlingar</a></li>
-            <li><a href="therapists.html">Terapeutar</a></li>
-            <li><a href="#appointment">Time bestilling</a></li>
-            <li><a class="contact-button" href="#contact">Kontakt oss</a></li>
+            <li><a href="/">Hjem</a></li>
+            <li><a href="/Behandlingar">Behandlingar</a></li>
+            <li><a href="/Terapeutar">Terapeutar</a></li>
+            <li><a href="/Time-bestilling">Time bestilling</a></li>
+            <li><a class="contact-button" href="/Kontakt">Kontakt oss</a></li>
         </ul>
     </nav>
     <div class="top-section">
 
         <div class="top-section-shadow"></div>
-        <div class="top-section-img therapists-img">
-            <h2 class="top-section-heading">VÅRE TERAPEUTAR</h2>
+        <div class="top-section-img appointment-img">
+            <h2 class="top-section-heading">TIME BESTILLING</h2>
         </div>
 
     </div>
+    <section class="services">
+        <div class="services-text appointment-text">
+            <p>Velg blant våre erfarne fysioterapeuter og bestill en time når det passer deg.
+            </p>
+        </div>
+
+    </section>
 
     <section class="therapists">
-        <div class="therapists-text">
-            <p>Fysio1 har terapeutar med lang erfaring og variert utdanningsbakgrunn som vil være med på å gi deg eit
-                best mogleg resultat.</p>
-        </div>
+
 
         <div class="therapists-container">
             <div class="therapists-card card-one">
@@ -83,18 +87,23 @@
                 <div class="card-info">
                     <p class="info-heading">Thomas Ose Silseth</p>
                     <p class="info-heading">Spesielle interesser:</p>
-                    <p class="first-par"> Skulder <br>
-                        Idrettskadehandtering <br>
-                        Løpsrelaterte plager (fot, ankel kne) <br>
-                        Rygg</p>
+                    <ul class="first-ul">
+                        <li>Skulder</li>
+                        <li>Idrettskadehandtering</li>
+                        <li>Løpsrelaterte plager</li>
+                        <li>Rygg</li>
+                    </ul>
+
                     <p class="info-heading">Forsikringsnettverk:
                     </p>
-                    <p> Idrettens skadetelefon <br>
-                        Falck <br>
-                        Nordic Netcare <br>
-                        Fremtind <br>
-                        Vertikal Helse <br>
-                        Tryg</p>
+                    <ul>
+                        <li>Idrettens skadetelefon</li>
+                        <li>Falck</li>
+                        <li>Nordic Netcare</li>
+                        <li>Fremtind</li>
+                        <li>Vertikal Helse</li>
+                        <li>Tryg</li>
+                    </ul>
                     <div class="card-buttons">
                         <button class="card-button button-back">Tilbake</button>
 
@@ -112,20 +121,26 @@
                 <div class="card-buttons"><button class="card-button button-about">Les meir...</button><button
                         class="card-button button-contact">Kontakt</button></div>
                 <div class="card-info">
-                    <p class="info-heading">Thomas Ose Silseth</p>
+                    <p class="info-heading">Frode Fuglehaug</p>
                     <p class="info-heading">Spesielle interesser:</p>
-                    <p class="first-par"> Skulder <br>
-                        Idrettskadehandtering <br>
-                        Løpsrelaterte plager (fot, ankel kne) <br>
-                        Rygg</p>
+                    <ul class="first-ul">
+                        <li>Skulder</li>
+                        <li>Idrettskadehandtering</li>
+                        <li>Løpsrelaterte plager</li>
+                        <li>Rygg</li>
+                    </ul>
+
                     <p class="info-heading">Forsikringsnettverk:
                     </p>
-                    <p> Idrettens skadetelefon <br>
-                        Falck <br>
-                        Nordic Netcare <br>
-                        Fremtind <br>
-                        Vertikal Helse <br>
-                        Tryg</p>
+                    <ul>
+                        <li>Idrettens skadetelefon</li>
+                        <li>Falck</li>
+                        <li>Nordic Netcare</li>
+                        <li>Fremtind</li>
+                        <li>Vertikal Helse</li>
+                        <li>Tryg</li>
+                    </ul>
+
                     <div class="card-buttons">
                         <button class="card-button button-back">Tilbake</button>
 
@@ -143,20 +158,25 @@
                 <div class="card-buttons"><button class="card-button button-about">Les meir...</button><button
                         class="card-button button-contact">Kontakt</button></div>
                 <div class="card-info">
-                    <p class="info-heading">Thomas Ose Silseth</p>
+                    <p class="info-heading">Erik Tønnesen</p>
                     <p class="info-heading">Spesielle interesser:</p>
-                    <p class="first-par"> Skulder <br>
-                        Idrettskadehandtering <br>
-                        Løpsrelaterte plager (fot, ankel kne) <br>
-                        Rygg</p>
+                    <ul class="first-ul">
+                        <li>Skulder</li>
+                        <li>Idrettskadehandtering</li>
+                        <li>Løpsrelaterte plager</li>
+                        <li>Rygg</li>
+                    </ul>
+
                     <p class="info-heading">Forsikringsnettverk:
                     </p>
-                    <p> Idrettens skadetelefon <br>
-                        Falck <br>
-                        Nordic Netcare <br>
-                        Fremtind <br>
-                        Vertikal Helse <br>
-                        Tryg</p>
+                    <ul>
+                        <li>Idrettens skadetelefon</li>
+                        <li>Falck</li>
+                        <li>Nordic Netcare</li>
+                        <li>Fremtind</li>
+                        <li>Vertikal Helse</li>
+                        <li>Tryg</li>
+                    </ul>
                     <div class="card-buttons">
                         <button class="card-button button-back">Tilbake</button>
 
@@ -174,20 +194,25 @@
                 <div class="card-buttons"><button class="card-button button-about">Les meir...</button><button
                         class="card-button button-contact">Kontakt</button></div>
                 <div class="card-info">
-                    <p class="info-heading">Thomas Ose Silseth</p>
+                    <p class="info-heading">Geir Arne Aarseth</p>
                     <p class="info-heading">Spesielle interesser:</p>
-                    <p class="first-par"> Skulder <br>
-                        Idrettskadehandtering <br>
-                        Løpsrelaterte plager (fot, ankel kne) <br>
-                        Rygg</p>
+                    <ul class="first-ul">
+                        <li>Skulder</li>
+                        <li>Idrettskadehandtering</li>
+                        <li>Løpsrelaterte plager</li>
+                        <li>Rygg</li>
+                    </ul>
+
                     <p class="info-heading">Forsikringsnettverk:
                     </p>
-                    <p> Idrettens skadetelefon <br>
-                        Falck <br>
-                        Nordic Netcare <br>
-                        Fremtind <br>
-                        Vertikal Helse <br>
-                        Tryg</p>
+                    <ul>
+                        <li>Idrettens skadetelefon</li>
+                        <li>Falck</li>
+                        <li>Nordic Netcare</li>
+                        <li>Fremtind</li>
+                        <li>Vertikal Helse</li>
+                        <li>Tryg</li>
+                    </ul>
                     <div class="card-buttons">
                         <button class="card-button button-back">Tilbake</button>
 
@@ -195,6 +220,12 @@
                 </div>
             </div>
         </div>
+
+    </section>
+
+    <section class="mid-section">
+
+        <div class="image-box"><a href="/Behandlingar" class="services-button">Les meir om våre behandlingar</a></div>
 
     </section>
 
@@ -213,7 +244,7 @@
             <p class="main">Administrasjon:</p>
             <p class="main-text">980 72 439</p>
 
-            <div class="contact-app-button"><a href="#appointment">Bestill time online</a></div>
+            <div class="contact-app-button"><a href="/Time-bestilling">Bestill time online</a></div>
             <p class="main">NB!</p>
             <p class="main-text warning">For refusjonsbehandling ta kontakt <br> per telefon då venteliste kan
                 forekome.</p>
@@ -254,11 +285,11 @@
             <p class="desktop-adr">Post- og besøksadresse: <br>
                 Fysio1 AS, Strandgata 4, 6150 ØRSTA</p> <i class="fa-brands fa-square-facebook"></i>
             <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Fysio1. Utviklet av <a
-                    href="https://dawdev.com/">DawDev</a>.</p>
+                    href="https://dawdev.no/">DawDev</a>.</p>
         </section>
 
     </footer>
 </body>
-<script src="js/script.js" defer></script>
+<script src="/js/script.js" defer></script>
 
 </html>

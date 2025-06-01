@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fysio1 Behandlingar</title>
+    <script src="https://kit.fontawesome.com/5c49569796.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <button class="burger-btn">
+        <div class="burger-btn__box">
+            <div class="burger-btn__bars"></div>
+        </div>
+    </button>
+
+    <nav class="nav">
+
+
+        <ul class="nav-list">
+            <li><a class="nav-item" href="/">Hjem</a></li>
+            <li><a class="nav-item" href="/Behandlingar">Behandlingar</a></li>
+            <li><a class="nav-item" href="/Terapeutar">Terapeutar</a></li>
+            <li><a class="nav-item" href="/Time-bestilling">Time bestilling</a></li>
+            <li><a class="nav-item" href="#contact">Kontakt oss</a></li>
+        </ul>
+        <a href="/">
+            <div class="logo"></div>
+        </a>
+
+    </nav>
+
+    <nav class="nav-desktop">
+        <a href="/" class="logo-home">
+            <div class="logo-desktop"></div>
+        </a>
+        <ul>
+            <li><a href="/">Hjem</a></li>
+            <li><a href="/Behandlingar">Behandlingar</a></li>
+            <li><a href="/Terapeutar">Terapeutar</a></li>
+            <li><a href="/Time-bestilling">Time bestilling</a></li>
+            <li><a class="contact-button" href="/Kontakt">Kontakt oss</a></li>
+        </ul>
+    </nav>
+    <div class="top-section contact-section">
+
+        <div class="top-section-shadow"></div>
+        <div class="top-section-img appointment-img">
+            <h2 class="top-section-heading">KONTAKT OSS</h2>
+        </div>
+
+    </div>
+    <section class="contact" id="contact">
+        <div class="contact-container services-contact">
+
+
+            <p class="main">Opningstider klinikk:</p>
+            <p class="main-text">Måndag-Fredag 08:00-16:30</p>
+            <br>
+            <p class="main">Telefon:</p>
+            <p class="main-text">700 68 100</p>
+            <br>
+            <p class="main">Administrasjon:</p>
+            <p class="main-text">980 72 439</p>
+
+            <div class="contact-app-button"><a href="/Time-bestilling">Bestill time online</a></div>
+            <p class="main">NB!</p>
+            <p class="main-text warning">For refusjonsbehandling ta kontakt <br> per telefon då venteliste kan
+                forekome.</p>
+
+        </div>
+        <div class="form-container">
+            <p class="contact-text">Ta kontakt med oss på e-post: post@fysio1.no <br>
+                eller ved å bruke skjema under.</p>
+            <form action="mail.php" method="post" class="contact__form">
+
+                <div class="contact__form-top">
+
+                    <label for="name" class="contact__form-label">Namn:</label>
+                    <input type="text" class="contact__form-input" id="name" name="name" required>
+
+                    <label for="email" class="contact__form-label">E-mail:</label>
+                    <input type="text" id="email" name="email" class="contact__form-input" required>
+
+                    <label for="msg" class="contact__form-label msg">Melding:</label>
+                    <textarea id="msg" name="msg" class="contact__form-textarea txet" required></textarea>
+                </div>
+
+
+                <button type="submit" class="contact__form-btn">SEND</button>
+
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <section class="footer">
+            <div class="logo"></div>
+            <p class="desktop-adr">Post- og besøksadresse: <br>
+                Fysio1 AS, Strandgata 4, 6150 ØRSTA</p> <i class="fa-brands fa-square-facebook"></i>
+            <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Fysio1. Utviklet av <a
+                    href="https://dawdev.no/">DawDev</a>.</p>
+        </section>
+
+    </footer>
+</body>
+<script src="/js/script.js" defer></script>
+
+</html>

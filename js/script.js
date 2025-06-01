@@ -21,7 +21,7 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 
-navBtn.addEventListener('click', handleNav);
+navBtn.addEventListener('click', handleNav)
 
 document.addEventListener('DOMContentLoaded', function () {
 	const serviceBlocks = document.querySelectorAll('.service')
@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		})
 	})
-});
+})
 
-const cards = document.querySelectorAll('.therapists-card');
+const cards = document.querySelectorAll('.therapists-card')
 
 const observer = new IntersectionObserver(
 	entries => {
@@ -87,19 +87,28 @@ const observer = new IntersectionObserver(
 		})
 	},
 	{ threshold: 0.1 }
-);
+)
 
-cards.forEach(card => observer.observe(card));
+cards.forEach(card => observer.observe(card))
 
 document.querySelectorAll('.therapists-card').forEach(card => {
 	const aboutBtn = card.querySelector('.button-about')
-	const backBtn = card.querySelector('.button-back')
+	const contactBtn = card.querySelector('.button-contact')
+	const backBtns = card.querySelectorAll('.button-back')
 
 	aboutBtn.addEventListener('click', () => {
-		card.classList.add('show-info')
+		card.classList.add('show-about')
+		card.classList.remove('show-contact')
 	})
 
-	backBtn.addEventListener('click', () => {
-		card.classList.remove('show-info')
+	contactBtn.addEventListener('click', () => {
+		card.classList.add('show-contact')
+		card.classList.remove('show-about')
 	})
+
+	backBtns.forEach(btn =>
+		btn.addEventListener('click', () => {
+			card.classList.remove('show-about', 'show-contact')
+		})
+	)
 })
