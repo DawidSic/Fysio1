@@ -192,9 +192,9 @@ body {
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 	display: none;
 	.logo-desktop {
-		margin-left: 80px;
+		margin-left: 60px;
 		height: 80px;
-		width: 300px;
+		width: 200px;
 		border-radius: 20px;
 		background-image: url('../img/Logo.jpeg');
 		background-size: 200px;
@@ -204,19 +204,19 @@ body {
 	}
 	ul {
 		display: flex;
+		flex-wrap: nowrap;
 		width: 100%;
-		justify-content: flex-end;
-		margin-right: 60px;
+		align-items: center;
+		justify-content: space-evenly;
+		overflow: hidden;
 		li {
-			padding: 0 2em;
 			list-style: none;
 			text-align: center;
-			line-height: 80px;
 			a {
 				text-decoration: none;
-				// text-transform: uppercase;
+				padding: 1em 0.5em;
 				color: c.$navtext;
-				font-size: 1.5rem;
+				font-size: 2rem;
 				letter-spacing: 1.1px;
 				&:hover {
 					color: #41a867;
@@ -766,69 +766,6 @@ body {
 		pointer-events: none;
 		transition: opacity 0.3s ease;
 	}
-
-	// .therapists-card {
-	// 	position: relative;
-	// 	width: 100%;
-	// 	height: 120px;
-	// 	background-color: c.$box-main-desktop;
-	// 	margin-bottom: 1em;
-	// 	border-radius: 30px;
-	// 	box-shadow: rgba(0, 0, 0, 0.303) 0 2px;
-	// 	.card-img {
-	// 		height: 100%;
-	// 		width: 30%;
-	// 		background-size: cover;
-	// 		background-position: center;
-	// 		background-repeat: no-repeat;
-	// 		border-radius: 30px;
-	// 	}
-	// 	.img-one {
-	// 		background-image: url('../img/img-one.png');
-	// 	}
-	// 	.img-two {
-	// 		background-image: url('../img/img-two.png');
-	// 	}
-	// 	.img-three {
-	// 		background-image: url('../img/img-three.png');
-	// 	}
-	// 	.img-four {
-	// 		background-image: url('../img/img-four.png');
-	// 	}
-	// 	.card-header {
-	// 		position: absolute;
-	// 		top: 10px;
-	// 		right: 10px;
-	// 		width: 70%;
-	// 		text-align: center;
-	// 		font-size: 1.5rem;
-	// 		h3{
-	// 			font-weight: normal;
-	// 		}
-	// 		p{
-	// 			font-size: 1.2rem;
-	// 			font-weight: 300;
-	// 		}
-	// 	}
-	// 	.card-text{
-	// 		position: absolute;
-	// 		top: 50px;
-	// 		right: 10px;
-	// 		width: 70%;
-	// 		text-align: center;
-	// 		font-size: 1.5rem;
-	// 	}
-	// 	.card-button{
-
-	// 	}
-	// 	.button-about{
-
-	// 	}
-	// 	.button-contact{
-
-	// 	}
-
-	// }
 }
 
 //APPOINTMENT
@@ -840,11 +777,136 @@ body {
 	margin-bottom: 90px;
 	text-align: center;
 }
+.button-book{
+	padding: 2rem 3rem;
+	background-color: c.$box-main-desktop;
+	border: 3px solid white;
+	border-radius: 12px;
+	font-size: 2rem;
+	box-shadow: 0px 1px rgba(0, 0, 0, 0.258);
+	text-decoration: none;
+	color: black;
+}
+.last{
+	padding: 1.5rem 2rem;
+}
 
 //CONTACT
 
 .contact-section {
 	margin-bottom: 60px;
+}
+
+//FASILITETAR
+.facili-img {
+	background-image: url('../img/fysio1bygg.jpg');
+	background-position: center;
+}
+.fac {
+	margin: 6em 1em 2em 1em;
+	.fac-heading {
+		text-align: center;
+		margin-right: 1em;
+		margin-left: 1em;
+		margin-bottom: 2em;
+	}
+	.fac-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		padding: 0 1rem;
+		max-width: calc(600px * 2 + 2rem); /* limit to 2 cards + gap */
+		margin: 0 auto;
+
+		.fac-card {
+			background-color: white;
+			flex: 1 1 100%;
+			max-width: 350px;
+			height: 340px;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			cursor: pointer;
+			.fac-card-img {
+				position: relative;
+				width: 100%;
+				height: 280px;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 12px 12px 0 0;
+				box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.22);
+			}
+			.fac-card-img:hover {
+				box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s;
+			}
+
+			.fac-img-one {
+				background-image: url('../img/fysioavdeling.png');
+			}
+			.fac-img-two {
+				background-image: url('../img/trening.png');
+			}
+			.fac-img-three {
+				background-image: url('../img/lab.png');
+			}
+			.fac-card-text {
+				width: 100%;
+				text-align: center;
+				line-height: 60px;
+				font-size: 2rem;
+			}
+		}
+		.fac-card:last-child {
+			margin-bottom: 2em;
+		}
+	}
+	.fac-container {
+		.fac-card-alt {
+			flex: 1 1 100%;
+			max-width: 350px;
+			height: 100px;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			cursor: pointer;
+			.fac-card-img-alt {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 12px;
+				box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+			}
+			.fac-card-img-alt:hover {
+				box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s;
+			}
+
+			.fac-img-one {
+				background-image: url('../img/fysioavdeling.png');
+			}
+			.fac-img-two {
+				background-image: url('../img/trening.png');
+			}
+			.fac-img-three {
+				background-image: url('../img/lab.png');
+			}
+			.fac-card-text-alt {
+				width: 100%;
+				text-align: center;
+				line-height: 100px;
+				font-size: 2rem;
+				color: white;
+			}
+		}
+	}
 }
 
 // MEDIA

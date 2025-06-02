@@ -190,9 +190,9 @@ body {
   display: none;
 }
 .nav-desktop .logo-desktop {
-  margin-left: 80px;
+  margin-left: 60px;
   height: 80px;
-  width: 300px;
+  width: 200px;
   border-radius: 20px;
   background-image: url("../img/Logo.jpeg");
   background-size: 200px;
@@ -202,20 +202,21 @@ body {
 }
 .nav-desktop ul {
   display: flex;
+  flex-wrap: nowrap;
   width: 100%;
-  justify-content: flex-end;
-  margin-right: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
 .nav-desktop ul li {
-  padding: 0 2em;
   list-style: none;
   text-align: center;
-  line-height: 80px;
 }
 .nav-desktop ul li a {
   text-decoration: none;
+  padding: 1em 0.5em;
   color: black;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 1.1px;
 }
 .nav-desktop ul li a:hover {
@@ -758,8 +759,130 @@ body {
   text-align: center;
 }
 
+.button-book {
+  padding: 2rem 3rem;
+  background-color: #8ce1ab;
+  border: 3px solid white;
+  border-radius: 12px;
+  font-size: 2rem;
+  box-shadow: 0px 1px rgba(0, 0, 0, 0.258);
+  text-decoration: none;
+  color: black;
+}
+
+.last {
+  padding: 1.5rem 2rem;
+}
+
 .contact-section {
   margin-bottom: 60px;
+}
+
+.facili-img {
+  background-image: url("../img/fysio1bygg.jpg");
+  background-position: center;
+}
+
+.fac {
+  margin: 6em 1em 2em 1em;
+}
+.fac .fac-heading {
+  text-align: center;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+.fac .fac-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  max-width: calc(1200px + 2rem); /* limit to 2 cards + gap */
+  margin: 0 auto;
+}
+.fac .fac-container .fac-card {
+  background-color: white;
+  flex: 1 1 100%;
+  max-width: 350px;
+  height: 340px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.fac .fac-container .fac-card .fac-card-img {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px 12px 0 0;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.22);
+}
+.fac .fac-container .fac-card .fac-card-img:hover {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.fac .fac-container .fac-card .fac-img-one {
+  background-image: url("../img/fysioavdeling.png");
+}
+.fac .fac-container .fac-card .fac-img-two {
+  background-image: url("../img/trening.png");
+}
+.fac .fac-container .fac-card .fac-img-three {
+  background-image: url("../img/lab.png");
+}
+.fac .fac-container .fac-card .fac-card-text {
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 2rem;
+}
+.fac .fac-container .fac-card:last-child {
+  margin-bottom: 2em;
+}
+.fac .fac-container .fac-card-alt {
+  flex: 1 1 100%;
+  max-width: 350px;
+  height: 100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.fac .fac-container .fac-card-alt .fac-card-img-alt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+}
+.fac .fac-container .fac-card-alt .fac-card-img-alt:hover {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.fac .fac-container .fac-card-alt .fac-img-one {
+  background-image: url("../img/fysioavdeling.png");
+}
+.fac .fac-container .fac-card-alt .fac-img-two {
+  background-image: url("../img/trening.png");
+}
+.fac .fac-container .fac-card-alt .fac-img-three {
+  background-image: url("../img/lab.png");
+}
+.fac .fac-container .fac-card-alt .fac-card-text-alt {
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+  font-size: 2rem;
+  color: white;
 }
 
 @media (min-width: 700px) {
