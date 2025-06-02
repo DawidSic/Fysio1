@@ -83,7 +83,6 @@ body {
 	}
 }
 
-
 .burger-btn {
 	position: fixed;
 	top: 5px;
@@ -152,18 +151,20 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background-color: #41a867;
-	z-index: 100;
+	z-index: 10000;
 	overflow: hidden;
 	transition: all 0.3s ease-in;
 	ul {
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
 		li {
 			list-style: none;
 			padding: 2.5rem;
+			width: 100%;
+			border-bottom: 1px solid white;
 			a {
 				text-decoration: none;
 				color: c.$pure-white;
@@ -781,7 +782,7 @@ body {
 	margin-bottom: 90px;
 	text-align: center;
 }
-.button-book{
+.button-book {
 	padding: 2rem 3rem;
 	background-color: c.$box-main-desktop;
 	border: 3px solid white;
@@ -791,7 +792,7 @@ body {
 	text-decoration: none;
 	color: black;
 }
-.last{
+.last {
 	padding: 1.5rem 2rem;
 }
 

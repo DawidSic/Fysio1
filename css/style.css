@@ -147,7 +147,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #41a867;
-  z-index: 100;
+  z-index: 10000;
   overflow: hidden;
   transition: all 0.3s ease-in;
 }
@@ -155,12 +155,14 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .nav-active ul li {
   list-style: none;
   padding: 2.5rem;
+  width: 100%;
+  border-bottom: 1px solid white;
 }
 .nav-active ul li a {
   text-decoration: none;
