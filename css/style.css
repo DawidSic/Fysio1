@@ -129,7 +129,6 @@ body {
   height: 80px;
   width: 100%;
   background-color: #fff;
-  border-radius: 0 0 20px 20px;
   z-index: 10;
   transition: all 0.3s ease-out;
 }
@@ -335,13 +334,35 @@ body {
   margin-left: 4em;
   justify-content: center;
 }
+.contact .map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.contact .map-container .map-text {
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1.8rem;
+}
+.contact .map-container .map-text span {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.contact .map-container iframe {
+  border-radius: 12px;
+}
 .contact .contact-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 4em 0 2em 0;
+  margin: 3em 0 2em 0;
   font-size: 2rem;
+  line-height: 1.5;
 }
 .contact .contact-container .main {
   font-weight: 500;
@@ -363,7 +384,7 @@ body {
   background-color: #82d8a1;
   text-decoration: none;
   color: black;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
 }
 .contact__form, .contact__form-top {
   display: flex;
@@ -432,10 +453,6 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
-.footer .logo {
-  width: 50%;
-  margin-left: 1em;
 }
 .footer .desktop-adr {
   display: none;
