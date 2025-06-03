@@ -136,6 +136,7 @@ body {
 	height: 80px;
 	width: 100%;
 	background-color: c.$pure-white;
+	border-radius: 0 0 10px 10px;
 	z-index: 10;
 	transition: all 0.3s ease-out;
 }
@@ -338,8 +339,8 @@ body {
 	margin-left: 4em;
 	justify-content: center;
 	.map-container {
-		.map-text{
-			span{
+		.map-text {
+			span {
 				font-weight: 500;
 				font-size: 2rem;
 			}
@@ -354,7 +355,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 2em;
-		iframe{
+		iframe {
 			border-radius: 12px;
 		}
 	}
@@ -456,7 +457,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	
+
 	.desktop-adr {
 		display: none;
 	}
