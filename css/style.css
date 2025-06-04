@@ -53,7 +53,6 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   color: #4cff8e;
-  text-align: center;
 }
 .container .cta-container {
   display: flex;
@@ -63,7 +62,7 @@ body {
 }
 .container .cta-container .cta {
   position: relative;
-  padding: 15px 25px;
+  padding: 20px 30px;
   background-color: #41a867;
   border-radius: 13px;
   border: none;
@@ -75,7 +74,7 @@ body {
 }
 .container .cta-container .cta .cta-text {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 2.3rem;
   text-transform: uppercase;
 }
 
@@ -716,6 +715,9 @@ body {
   transition: opacity 0.3s ease;
   z-index: 2;
 }
+.therapists .card-info .desktop-heading {
+  display: none;
+}
 .therapists .card-info .info-heading {
   text-align: center;
   font-weight: 500;
@@ -825,7 +827,7 @@ body {
   margin: 0 auto;
 }
 .fac .fac-container .fac-card {
-  background-color: white;
+  background-color: #8ce1ab;
   flex: 1 1 100%;
   max-width: 350px;
   height: 340px;
@@ -1108,10 +1110,45 @@ body {
   }
   .therapists .therapists-container .card-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     height: 100%;
+  }
+  .therapists .therapists-container .card-info ul li {
+    line-height: 1.5;
+  }
+  .therapists .therapists-container .card-info .info-heading {
+    margin-top: 1em;
+  }
+  .therapists .therapists-container .card-info .first-ul {
+    width: 50%;
+    height: 50%;
+  }
+  .therapists .therapists-container .card-info .first-heading {
+    margin-top: 0.5em;
+    width: 100%;
+    font-size: 2.2rem;
+  }
+  .therapists .therapists-container .card-info .second-heading-info {
+    width: 50%;
+    font-size: 1.8rem;
+  }
+  .therapists .therapists-container .card-info .third-heading {
+    width: 50%;
+    font-size: 1.8rem;
+  }
+  .therapists .therapists-container .card-info .mobile-heading {
+    display: none;
+  }
+  .therapists .therapists-container .card-info .desktop-heading {
+    display: inline;
+  }
+  .therapists .therapists-container .card-info .card-buttons {
+    width: 100%;
+  }
+  .therapists .therapists-container .card-info .card-buttons .card-button {
+    padding: 1rem 2rem;
   }
   .appointment-text {
     margin-bottom: 0;

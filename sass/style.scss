@@ -49,13 +49,13 @@ body {
 	}
 	.mobile {
 		display: inline;
+
 	}
 	.hero-heading-mid {
 		font-size: 3.6rem;
 		font-weight: 400;
 		text-transform: uppercase;
 		color: #4cff8e;
-		text-align: center;
 	}
 	.cta-container {
 		display: flex;
@@ -64,7 +64,7 @@ body {
 		margin-bottom: 10vh;
 		.cta {
 			position: relative;
-			padding: 15px 25px;
+			padding: 20px 30px;
 			background-color: c.$nav-main;
 			border-radius: 13px;
 			border: none;
@@ -76,7 +76,7 @@ body {
 
 			.cta-text {
 				color: c.$pure-white;
-				font-size: 1.6rem;
+				font-size: 2.3rem;
 				text-transform: uppercase;
 			}
 		}
@@ -725,6 +725,9 @@ body {
 		background-color: c.$box-main-desktop;
 		transition: opacity 0.3s ease;
 		z-index: 2;
+		.desktop-heading {
+			display: none;
+		}
 		.info-heading {
 			text-align: center;
 			font-weight: 500;
@@ -844,7 +847,7 @@ body {
 		margin: 0 auto;
 
 		.fac-card {
-			background-color: white;
+			background-color: c.$box-main-desktop;
 			flex: 1 1 100%;
 			max-width: 350px;
 			height: 340px;
@@ -1157,10 +1160,48 @@ body {
 			}
 			.card-info {
 				display: flex;
-				flex-direction: column;
-				align-items: center;
+				flex-direction: row;
+				flex-wrap: wrap;
 				justify-content: center;
 				height: 100%;
+
+				ul {
+					li {
+						line-height: 1.5;
+					}
+				}
+				.info-heading {
+					margin-top: 1em;
+				}
+				.first-ul {
+					width: 50%;
+					height: 50%;
+				}
+				.first-heading {
+					margin-top: 0.5em;
+					width: 100%;
+					font-size: 2.2rem;
+				}
+				.second-heading-info {
+					width: 50%;
+					font-size: 1.8rem;
+				}
+				.third-heading {
+					width: 50%;
+					font-size: 1.8rem;
+				}
+				.mobile-heading {
+					display: none;
+				}
+				.desktop-heading {
+					display: inline;
+				}
+				.card-buttons {
+					width: 100%;
+					.card-button {
+						padding: 1rem 2rem;
+					}
+				}
 			}
 		}
 	}
