@@ -112,3 +112,18 @@ document.querySelectorAll('.therapists-card').forEach(card => {
 		})
 	)
 })
+
+document.addEventListener('click', function (e) {
+	document.querySelectorAll('.therapists-card.show-about').forEach(card => {
+		if (!card.contains(e.target)) {
+			card.classList.remove('show-about')
+		}
+	})
+})
+document.addEventListener('click', function (e) {
+	document.querySelectorAll('.therapists-card.show-contact').forEach(card => {
+		if (!card.contains(e.target)) {
+			card.classList.remove('show-contact')
+		}
+	})
+})

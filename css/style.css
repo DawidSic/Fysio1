@@ -627,6 +627,7 @@ body {
   border: 3px solid #8ce1ab;
   flex: 1 1 100%;
   max-width: 250px;
+  max-height: 360px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -634,6 +635,7 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease, scale 0.2s ease;
+  position: relative;
 }
 .therapists .therapists-container .therapists-card .card-img {
   width: 100%;
@@ -698,6 +700,9 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+.therapists .therapists-container .therapists-card.visible.show-about {
+  overflow: scroll;
+}
 .therapists .therapists-container .therapists-card:hover {
   transform: translateY(0) scale(1.02);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -719,19 +724,34 @@ body {
 .therapists .card-info .desktop-heading {
   display: none;
 }
+.therapists .card-info .first-heading {
+  font-size: 2rem;
+}
 .therapists .card-info .info-heading {
   text-align: center;
   font-weight: 500;
   margin-bottom: 1rem;
+}
+.therapists .card-info .fourth-heading {
+  margin-top: 1em;
 }
 .therapists .card-info .first-ul {
   margin-bottom: 1em;
 }
 .therapists .card-info ul {
   margin-bottom: 0.5em;
+  padding-left: 1rem;
 }
 .therapists .card-info ul li {
-  list-style: inside;
+  list-style-position: outside;
+  padding-left: 1rem;
+}
+.therapists .card-info .last-ul {
+  width: 100%;
+}
+.therapists .card-info .last-ul li {
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 .therapists .mail-thomas {
   font-size: 1.3rem;
@@ -753,10 +773,6 @@ body {
   text-decoration: none;
   padding: 2rem 3rem;
   font-size: 1.7rem;
-}
-.therapists .therapists-card {
-  position: relative;
-  overflow: hidden;
 }
 .therapists .therapists-card.show-about .card-info-about,
 .therapists .therapists-card.show-contact .card-info-contact {
@@ -822,7 +838,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   padding: 0 1rem;
   max-width: calc(1200px + 2rem); /* limit to 2 cards + gap */
   margin: 0 auto;
@@ -859,7 +875,7 @@ body {
   background-image: url("../img/trening.png");
 }
 .fac .fac-container .fac-card .fac-img-three {
-  background-image: url("../img/lab.png");
+  background-image: url("../img/reception.jpg");
 }
 .fac .fac-container .fac-card .fac-card-text {
   width: 100%;
@@ -867,48 +883,72 @@ body {
   line-height: 60px;
   font-size: 2rem;
 }
+.fac .fac-container .fac-card a {
+  text-decoration: none;
+  color: black;
+}
 .fac .fac-container .fac-card:last-child {
   margin-bottom: 2em;
 }
-.fac .fac-container .fac-card-alt {
+.fac .fac-container-alt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  max-width: calc(1360px + 2rem); /* limit to 2 cards + gap */
+  margin: 0 auto;
+}
+.fac .fac-container-alt .fac-card-alt {
+  position: relative;
+  background-color: #8ce1ab;
   flex: 1 1 100%;
-  max-width: 350px;
-  height: 100px;
+  max-width: 338px;
+  height: 338px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   cursor: pointer;
 }
-.fac .fac-container .fac-card-alt .fac-card-img-alt {
+.fac .fac-container-alt .fac-card-alt .fac-card-img-alt {
   position: relative;
-  width: 100%;
-  height: 100%;
+  top: 10px;
+  left: 10px;
+  width: 318px;
+  height: 318px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 12px;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 }
-.fac .fac-container .fac-card-alt .fac-card-img-alt:hover {
+.fac .fac-container-alt .fac-card-alt .fac-card-img-alt:hover {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
-.fac .fac-container .fac-card-alt .fac-img-one {
+.fac .fac-container-alt .fac-card-alt .fac-img-one {
   background-image: url("../img/fysioavdeling.png");
 }
-.fac .fac-container .fac-card-alt .fac-img-two {
+.fac .fac-container-alt .fac-card-alt .fac-img-two {
   background-image: url("../img/trening.png");
 }
-.fac .fac-container .fac-card-alt .fac-img-three {
-  background-image: url("../img/lab.png");
+.fac .fac-container-alt .fac-card-alt .fac-img-three {
+  background-image: url("../img/reception.jpg");
 }
-.fac .fac-container .fac-card-alt .fac-card-text-alt {
+.fac .fac-container-alt .fac-card-alt .fac-card-text-alt {
+  position: absolute;
+  top: 166px;
   width: 100%;
   text-align: center;
-  line-height: 100px;
-  font-size: 2rem;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
   color: white;
+}
+.fac .fac-container-alt .fac-card:last-child {
+  margin-bottom: 2em;
 }
 
 @media (min-width: 700px) {
@@ -1049,6 +1089,7 @@ body {
   }
   .mid-section {
     height: 240px;
+    margin-bottom: 4em;
   }
   .mid-section .image-box {
     background-position: top;
@@ -1067,18 +1108,19 @@ body {
   }
   .contact .form-container {
     width: 30%;
-    margin: 4em;
+    margin: 2em 4em;
   }
   .contact .contact-container {
     width: 30%;
     margin: 4em 0;
+    padding: 0;
   }
   .contact .contact-text {
-    margin: 4rem 0;
+    margin: 0rem 0 2em 0;
   }
   .contact .map-container {
-    width: 40%;
-    padding: 2em;
+    width: 30%;
+    padding: 2em 2em 2em 3em;
   }
   .contact .map-container iframe {
     width: 100%;
@@ -1157,6 +1199,9 @@ body {
   .services-container .service p {
     font-size: 2rem;
   }
+  .therapists {
+    margin-bottom: 5em;
+  }
   .therapists .therapists-container .therapists-card {
     max-width: 450px;
   }
@@ -1170,6 +1215,10 @@ body {
     justify-content: center;
     height: 100%;
   }
+  .therapists .therapists-container .card-info ul {
+    width: 50%;
+    padding-left: 2rem;
+  }
   .therapists .therapists-container .card-info ul li {
     line-height: 1.5;
   }
@@ -1179,6 +1228,7 @@ body {
   .therapists .therapists-container .card-info .first-ul {
     width: 50%;
     height: 50%;
+    padding-left: 1.5rem;
   }
   .therapists .therapists-container .card-info .first-heading {
     margin-top: 0.5em;
@@ -1192,6 +1242,21 @@ body {
   .therapists .therapists-container .card-info .third-heading {
     width: 50%;
     font-size: 1.8rem;
+  }
+  .therapists .therapists-container .card-info .fourth-heading {
+    width: 80%;
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+  .therapists .therapists-container .card-info .last-ul {
+    margin-left: 1em;
+    width: 100%;
+  }
+  .therapists .therapists-container .card-info .last-ul li {
+    line-height: 1.1;
+  }
+  .therapists .therapists-container .card-info .erik-mt {
+    margin-top: 1em;
   }
   .therapists .therapists-container .card-info .mobile-heading {
     display: none;
@@ -1207,6 +1272,65 @@ body {
   }
   .appointment-text {
     margin-bottom: 0;
+  }
+  .fac {
+    margin-bottom: 4em;
+  }
+  .fac .fac-heading {
+    margin: 0 auto 2em auto;
+    width: 60%;
+    font-size: 2rem;
+  }
+  .contact__form, .contact__form-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__form-label {
+    margin-bottom: 0.2em;
+    margin-left: 0.2em;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 300;
+    align-self: flex-start;
+  }
+  .contact__form-input {
+    margin-bottom: 0.5em;
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 0 20px 20px 20px;
+    font-size: 1.6rem;
+    background-color: #82d8a1;
+    min-width: 400px;
+  }
+  .contact__form-textarea {
+    margin-bottom: 0.5em;
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 0 20px 20px 20px;
+    font-size: 1.6rem;
+    background-color: #82d8a1;
+    min-width: 100%;
+    min-height: 250px;
+    max-width: 450px;
+    max-height: 600px;
+  }
+  .contact__form-btn {
+    margin-top: 2rem;
+    align-self: center;
+    padding: 15px 25px;
+    width: 50%;
+    max-width: 300px;
+    color: black;
+    border: none;
+    border-radius: 0 20px 20px 20px;
+    background-color: #82d8a1;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-bottom: 3em;
+  }
+  .contact__form-btn::before {
+    background-color: green;
   }
 }
 @media (min-width: 1405px) {
