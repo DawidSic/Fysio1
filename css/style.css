@@ -173,11 +173,10 @@ body {
 .logo {
   height: 80px;
   width: 200px;
-  border-radius: 20px;
-  background-image: url("../img/Logo.jpeg");
-  background-size: 200px;
+  background-image: url("../img/fysio-logo.png");
+  background-size: 170px;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   z-index: 1000;
 }
 
@@ -198,10 +197,10 @@ body {
   height: 80px;
   width: 200px;
   border-radius: 20px;
-  background-image: url("../img/Logo.jpeg");
-  background-size: 200px;
+  background-image: url("../img/fysio-logo.png");
+  background-size: 180px;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   z-index: 1000;
 }
 .nav-desktop ul {
@@ -868,8 +867,41 @@ body {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
+.fac .fac-container .fac-card .fys {
+  height: 340px;
+  border-radius: 12px;
+  box-shadow: none;
+  cursor: default;
+}
+.fac .fac-container .fac-card .fys:hover {
+  box-shadow: none;
+}
 .fac .fac-container .fac-card .fac-img-one {
-  background-image: url("../img/fysioavdeling.png");
+  background-image: url("../img/IMG_0179.jpg");
+}
+.fac .fac-container .fac-card .fac-img-fys-one {
+  height: 340px;
+  border-radius: 12px;
+  background-image: url("../img/IMG_0179.jpg");
+}
+.fac .fac-container .fac-card .fac-img-fys-two {
+  background-image: url("../img/IMG_0158.jpg");
+  background-position: -125px, right;
+}
+.fac .fac-container .fac-card .fac-img-fys-three {
+  background-image: url("../img/IMG_0215.jpg");
+  background-position: -40px, right;
+}
+.fac .fac-container .fac-card .fac-img-fys-three {
+  background-image: url("../img/IMG_0215.jpg");
+  background-position: -40px, right;
+}
+.fac .fac-container .fac-card .fac-img-fys-four {
+  background-image: url("../img/IMG_0187.jpg");
+  background-position: -20px, right;
+}
+.fac .fac-container .fac-card .fac-img-fys-five {
+  background-image: url("../img/IMG_0178.jpg");
 }
 .fac .fac-container .fac-card .fac-img-two {
   background-image: url("../img/trening.png");
@@ -890,65 +922,8 @@ body {
 .fac .fac-container .fac-card:last-child {
   margin-bottom: 2em;
 }
-.fac .fac-container-alt {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.fac .fys-container {
   gap: 2rem;
-  padding: 0 1rem;
-  max-width: calc(1360px + 2rem); /* limit to 2 cards + gap */
-  margin: 0 auto;
-}
-.fac .fac-container-alt .fac-card-alt {
-  position: relative;
-  background-color: #8ce1ab;
-  flex: 1 1 100%;
-  max-width: 338px;
-  height: 338px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-.fac .fac-container-alt .fac-card-alt .fac-card-img-alt {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  width: 318px;
-  height: 318px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 12px;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
-}
-.fac .fac-container-alt .fac-card-alt .fac-card-img-alt:hover {
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-.fac .fac-container-alt .fac-card-alt .fac-img-one {
-  background-image: url("../img/fysioavdeling.png");
-}
-.fac .fac-container-alt .fac-card-alt .fac-img-two {
-  background-image: url("../img/trening.png");
-}
-.fac .fac-container-alt .fac-card-alt .fac-img-three {
-  background-image: url("../img/reception.jpg");
-}
-.fac .fac-container-alt .fac-card-alt .fac-card-text-alt {
-  position: absolute;
-  top: 166px;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: white;
-}
-.fac .fac-container-alt .fac-card:last-child {
-  margin-bottom: 2em;
 }
 
 @media (min-width: 700px) {
