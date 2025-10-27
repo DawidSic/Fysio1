@@ -3,6 +3,7 @@ const navList = document.querySelector('.nav-list')
 const nav = document.querySelector('.nav')
 const allNavItems = document.querySelectorAll('.nav-item')
 const footerYear = document.querySelector('.footer__year')
+const infoText = document.getElementById('infoText')
 
 const handleNav = () => {
 	nav.classList.toggle('nav-active')
@@ -126,4 +127,13 @@ document.addEventListener('click', function (e) {
 			card.classList.remove('show-contact')
 		}
 	})
+})
+
+infoText.addEventListener('scroll', () => {
+	const { scrollTop, scrollHeight, clientHeight } = infoText
+	if (scrollTop + clientHeight >= scrollHeight - 5) {
+		infoText.classList.add('at-bottom')
+	} else {
+		infoText.classList.remove('at-bottom')
+	}
 })
