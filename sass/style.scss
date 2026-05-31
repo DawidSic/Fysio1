@@ -434,6 +434,16 @@ body {
 			font-size: 1.5rem;
 		}
 	}
+	.contact-container {
+		a {
+			color: c.$bars;
+			text-decoration: none;
+			word-break: break-word;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 	.contact-center {
 		gap: 1rem;
 	}

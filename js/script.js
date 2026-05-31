@@ -138,15 +138,19 @@ document.querySelectorAll('.therapists-card').forEach(card => {
 	const contactBtn = card.querySelector('.button-contact')
 	const backBtns = card.querySelectorAll('.button-back')
 
-	aboutBtn.addEventListener('click', () => {
-		card.classList.add('show-about')
-		card.classList.remove('show-contact')
-	})
+	if (aboutBtn) {
+		aboutBtn.addEventListener('click', () => {
+			card.classList.add('show-about')
+			card.classList.remove('show-contact')
+		})
+	}
 
-	contactBtn.addEventListener('click', () => {
-		card.classList.add('show-contact')
-		card.classList.remove('show-about')
-	})
+	if (contactBtn) {
+		contactBtn.addEventListener('click', () => {
+			card.classList.add('show-contact')
+			card.classList.remove('show-about')
+		})
+	}
 
 	backBtns.forEach(btn =>
 		btn.addEventListener('click', () => {
