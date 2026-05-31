@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fysio1.no/sitemap.xml

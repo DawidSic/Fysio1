@@ -2,8 +2,8 @@
 
 $name = $_POST["name"];
 $from = $_POST["email"];
-$subject = "Kontakt skjema melding fra DawDev.com";
-$to = "dawid@dawdev.com";
+$subject = "Kontaktmelding frå fysio1.no";
+$to = "post@fysio1.no";
 $message = $_POST["msg"];
 
 $txt = "Navn: " . $name . "\r\n" . "Email: " . $from . "\r\n" . "\r\n" . "Innhold: " . $message;
