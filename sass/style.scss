@@ -57,6 +57,9 @@ body {
 		color: #4cff8e;
 		text-align: center;
 	}
+	.hero-break {
+		display: none;
+	}
 	.cta-container {
 		display: flex;
 		justify-content: center;
@@ -176,7 +179,7 @@ body {
 .logo {
 	height: 80px;
 	width: 200px;
-	background-image: url('../img/fysio-logo.png');
+	background-image: url('../img/fysio-logo.webp');
 	background-size: 170px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -199,7 +202,7 @@ body {
 		height: 80px;
 		width: 200px;
 		border-radius: 20px;
-		background-image: url('../img/fysio-logo.png');
+		background-image: url('../img/fysio-logo.webp');
 		background-size: 180px;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -282,22 +285,19 @@ body {
 		border-radius: 100px 0 0 100px;
 	}
 	.info-box {
-		// position: absolute;
-		// top: 6%;
-		// left: 0;
-		// height: 65%;
-		// width: 85%;
-		// background-color: c.$box-main;
-		// padding: 20px;
-		// border-radius: 0 100px 100px 0;
-		// display: flex;
-		position: relative;
-		height: 33%;
+		position: absolute;
+		top: 6%;
+		left: 0;
+		height: 65%;
 		width: 85%;
+		background-color: c.$box-main;
+		padding: 20px;
+		border-radius: 0 100px 100px 0;
+		display: flex;
 
 		.info-text {
 			justify-content: center;
-			overflow-y: scroll;
+			overflow-y: auto;
 			align-content: center;
 			font-size: 1.1em;
 			line-height: 1.5;
@@ -360,8 +360,8 @@ body {
 	.image-box {
 		width: 100%;
 		height: 100%;
-		background-image:
-			linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../img/Does-Physical-Therapy-Actually-Work.webp');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+			url('../img/Does-Physical-Therapy-Actually-Work.webp');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -560,7 +560,26 @@ body {
 		}
 	}
 	.services-img {
-		background-image: url('../img/top-section-1.jpeg');
+		background-image: url('../img/32079.webp');
+	}
+}
+
+.hero-overlay {
+	position: relative;
+	overflow: hidden;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.35);
+		z-index: 1;
+	}
+	.top-section-heading {
+		position: relative;
+		z-index: 2;
 	}
 }
 .services-text {
@@ -644,10 +663,7 @@ body {
 		overflow: hidden;
 		opacity: 0;
 		padding-top: 0;
-		transition:
-			max-height 0.6s ease-in-out,
-			opacity 0.5s ease-in-out,
-			padding-top 0.3s ease-in-out,
+		transition: max-height 0.6s ease-in-out, opacity 0.5s ease-in-out, padding-top 0.3s ease-in-out,
 			padding-bottom 0.3s ease-in-out;
 		a {
 			padding-top: 1rem;
@@ -680,7 +696,8 @@ body {
 // THERAPISTS
 
 .therapists-img {
-	background-image: url('../img/therapists.png');
+	background-image: none;
+	background-color: #2a6047;
 }
 .therapists {
 	margin: 6em 1em 2em 1em;
@@ -710,10 +727,7 @@ body {
 			flex-direction: column;
 			opacity: 0;
 			transform: translateY(40px);
-			transition:
-				opacity 0.6s ease,
-				transform 0.6s ease,
-				scale 0.2s ease;
+			transition: opacity 0.6s ease, transform 0.6s ease, scale 0.2s ease;
 			position: relative;
 			.card-img {
 				width: 100%;
@@ -724,16 +738,16 @@ body {
 				border-radius: 12px;
 			}
 			.img-one {
-				background-image: url('../img/img-one.png');
+				background-image: url('../img/img-one.webp');
 			}
 			.img-two {
-				background-image: url('../img/img-two.png');
+				background-image: url('../img/img-two.webp');
 			}
 			.img-three {
-				background-image: url('../img/img-three.png');
+				background-image: url('../img/img-three.webp');
 			}
 			.img-four {
-				background-image: url('../img/Sunaq_26122447359\ 2_065_WEB.jpg');
+				background-image: url('../img/Sunaq_26122447359\ 2_065_WEB.webp');
 				min-height: 320px;
 			}
 			.card-header,
@@ -892,7 +906,7 @@ body {
 //APPOINTMENT
 
 .appointment-img {
-	background-image: url('../img/appointment.jpg');
+	background-image: url('../img/appointment.webp');
 }
 .appointment-text {
 	margin-bottom: 90px;
@@ -920,8 +934,8 @@ body {
 
 //FASILITETAR
 .facili-img {
-	// background-image: url('../img/fysio1bygg.jpg');
-	background-image: url('../img/IMG_2495.JPG');
+	// background-image: url('../img/fysio1bygg.webp');
+	background-image: url('../img/IMG_2495.webp');
 	background-position: center;
 }
 
@@ -942,7 +956,7 @@ body {
 		max-width: calc(600px * 2 + 2rem); /* limit to 2 cards + gap */
 		margin: 0 auto;
 
-		.fac-card {
+			.fac-card {
 			background-color: c.$box-main-desktop;
 			flex: 1 1 100%;
 			max-width: 350px;
@@ -977,48 +991,49 @@ body {
 			}
 
 			.fac-img-one {
-				background-image: url('../img/IMG_0179.jpg');
+				background-image: url('../img/FysOffice.webp');
 			}
 			.fac-img-two {
-				background-image: url('../img/IMG_0192.jpg');
+				background-image: url('../img/IMG_0189.webp');
+				background-position: center;
 			}
 			.fac-img-three {
-				background-image: url('../img/IMG_0158.jpeg');
+				background-image: url('../img/IMG_0158.webp');
 				background-position: right;
 			}
 			.fac-img-fys-one {
 				height: 340px;
 				border-radius: 12px;
-				background-image: url('../img/IMG_0179.jpg');
+				background-image: url('../img/IMG_0179.webp');
 			}
-			.fac-img-fys-two {
-				background-image: url('../img/IMG_0158.jpeg');
-				background-position: -125px, right;
-			}
-			.fac-img-fys-three {
-				background-image: url('../img/IMG_0179.jpg');
-				background-position: -40px, right;
-			}
+				.fac-img-fys-two {
+					background-image: url('../img/FysOffice.webp');
+					background-position: center;
+				}
+				.fac-img-fys-three {
+					background-image: url('../img/IMG_0189.webp');
+					background-position: center;
+				}
 
 			.fac-img-loc-one {
-				background-image: url('../img/IMG_0166.JPG');
+				background-image: url('../img/IMG_0166.webp');
 				background-size: 180%;
 				background-position: center -80px;
 			}
 			.fac-img-loc-two {
-				background-image: url('../img/IMG_0158.jpeg');
+				background-image: url('../img/IMG_0158.webp');
 			}
 			.fac-img-loc-three {
-				background-image: url('../img/IMG_0154.JPG');
+				background-image: url('../img/IMG_0154.webp');
 			}
 			.fac-img-gym-one {
-				background-image: url('../img/IMG_0189.JPG');
+				background-image: url('../img/bikes.webp');
 			}
 			.fac-img-gym-two {
-				background-image: url('../img/IMG_0213.JPG');
+				background-image: url('../img/IMG_0213.webp');
 			}
 			.fac-img-gym-three {
-				background-image: url('../img/IMG_0187.JPG');
+				background-image: url('../img/IMG_0187.webp');
 				background-position: -50px center;
 			}
 			.fac-card-text {
@@ -1075,6 +1090,26 @@ body {
 		.info-box {
 			.info-text {
 				font-size: 2.2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.hero-break {
+		display: block;
+		margin-top: 0.4rem;
+	}
+}
+
+@media (max-width: 440px) {
+	.info {
+		.info-box {
+			padding-right: 36px;
+			.info-text {
+				padding-right: 4px;
+				word-break: break-word;
+				hyphens: auto;
 			}
 		}
 	}

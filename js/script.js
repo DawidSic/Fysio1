@@ -3,29 +3,75 @@ const navList = document.querySelector('.nav-list')
 const nav = document.querySelector('.nav')
 const allNavItems = document.querySelectorAll('.nav-item')
 const footerYear = document.querySelector('.footer__year')
-const infoText = document.getElementById('infoText')
+const infoTextSections = document.querySelectorAll('.js-info-text')
+
+if (navList && !navList.id) {
+	navList.id = 'primary-navigation'
+}
+if (navBtn) {
+	navBtn.setAttribute('aria-label', 'Opne meny')
+	if (navList) {
+		navBtn.setAttribute('aria-controls', navList.id)
+	}
+	navBtn.setAttribute('aria-expanded', 'false')
+}
 
 const handleNav = () => {
+	if (!nav) return
 	nav.classList.toggle('nav-active')
-
-	allNavItems.forEach(item => {
-		item.addEventListener('click', () => {
-			nav.classList.remove('nav-active')
-		})
-	})
+	const isExpanded = nav.classList.contains('nav-active')
+	if (navBtn) {
+		navBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false')
+	}
 }
 
 const handleCurrentYear = () => {
+	if (!footerYear) return
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
 }
 
 handleCurrentYear()
 
-navBtn.addEventListener('click', handleNav)
+if (navBtn) {
+	navBtn.addEventListener('click', handleNav)
+}
+
+allNavItems.forEach(item => {
+	item.addEventListener('click', () => {
+		if (!nav) return
+		nav.classList.remove('nav-active')
+		if (navBtn) {
+			navBtn.setAttribute('aria-expanded', 'false')
+		}
+	})
+})
 
 document.addEventListener('DOMContentLoaded', function () {
 	const serviceBlocks = document.querySelectorAll('.service')
+
+	const scrollServiceIntoView = targetService => {
+		if (!targetService) return
+		const rect = targetService.getBoundingClientRect()
+		const offset = window.pageYOffset + rect.top - 150
+		const target = offset < 0 ? 0 : offset
+		window.scrollTo({ top: target, behavior: 'smooth' })
+	}
+
+	const collapseService = targetService => {
+		if (!targetService) return false
+		const targetButton = targetService.querySelector('.arrow-toggle')
+		if (!targetButton) return false
+		const isExpanded = targetButton.getAttribute('aria-expanded') === 'true'
+		if (!isExpanded) return false
+		const targetContentId = targetButton.getAttribute('aria-controls')
+		const targetContent = document.getElementById(targetContentId)
+		const targetArrow = targetButton.querySelector('.arrow')
+		if (targetContent) targetContent.classList.remove('visible')
+		if (targetArrow) targetArrow.classList.remove('rotated')
+		targetButton.setAttribute('aria-expanded', 'false')
+		return true
+	}
 
 	serviceBlocks.forEach(service => {
 		const button = service.querySelector('.arrow-toggle')
@@ -37,29 +83,24 @@ document.addEventListener('DOMContentLoaded', function () {
 			const isExpanded = button.getAttribute('aria-expanded') === 'true'
 
 			if (isExpanded) {
-				// Close this one
-				content.classList.remove('visible')
-				arrow.classList.remove('rotated')
-				button.setAttribute('aria-expanded', 'false')
+				if (collapseService(service)) {
+					requestAnimationFrame(() => scrollServiceIntoView(service))
+				}
 			} else {
 				// Close all others first
 				serviceBlocks.forEach(otherService => {
 					if (otherService !== service) {
-						const otherButton = otherService.querySelector('.arrow-toggle')
-						const otherContentId = otherButton.getAttribute('aria-controls')
-						const otherContent = document.getElementById(otherContentId)
-						const otherArrow = otherButton.querySelector('.arrow')
-
-						otherContent.classList.remove('visible')
-						otherArrow.classList.remove('rotated')
-						otherButton.setAttribute('aria-expanded', 'false')
+						collapseService(otherService)
 					}
 				})
 
 				// Open this one
-				content.classList.add('visible')
-				arrow.classList.add('rotated')
+				content && content.classList.add('visible')
+				arrow && arrow.classList.add('rotated')
 				button.setAttribute('aria-expanded', 'true')
+				requestAnimationFrame(() => {
+					requestAnimationFrame(() => scrollServiceIntoView(service))
+				})
 			}
 		}
 
@@ -129,11 +170,13 @@ document.addEventListener('click', function (e) {
 	})
 })
 
-infoText.addEventListener('scroll', () => {
-	const { scrollTop, scrollHeight, clientHeight } = infoText
-	if (scrollTop + clientHeight >= scrollHeight - 5) {
-		infoText.classList.add('at-bottom')
-	} else {
-		infoText.classList.remove('at-bottom')
-	}
+infoTextSections.forEach(section => {
+	section.addEventListener('scroll', () => {
+		const { scrollTop, scrollHeight, clientHeight } = section
+		if (scrollTop + clientHeight >= scrollHeight - 5) {
+			section.classList.add('at-bottom')
+		} else {
+			section.classList.remove('at-bottom')
+		}
+	})
 })
