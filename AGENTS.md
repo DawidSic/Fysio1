@@ -8,7 +8,7 @@ Project: **Fysio1 static website**
 
 ### Repository Structure
 - `index.html` – homepage with hero, info, contact, footer.
-- `/<Section>/index.html` – per-section static pages (`Behandlingar`, `Terapeutar`, `Time-bestilling`, `Fasilitetar`, `Fysioavdeling`, `Lokale`, `Treningsstudio`, `Kontakt`).
+- `/<Section>/index.html` – per-section static pages (`Behandlingar`, `Terapeutar`, `Timebestilling`, `Fasilitetar`, `Fysioavdeling`, `Lokale`, `Treningsstudio`, `Kontakt`).
 - `sass/` – SCSS source (`style.scss`, `_colors.scss`, `_mixins.scss`, `_components.scss`).
 - `css/style.css` & `css/style.css.map` – compiled output; never edit directly.
 - `js/script.js` – single vanilla JS bundle shared by all pages.
