@@ -48,6 +48,10 @@ allNavItems.forEach(item => {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
+	infoTextSections.forEach(section => {
+		section.scrollTop = 0
+	})
+
 	const serviceBlocks = document.querySelectorAll('.service')
 
 	const scrollServiceIntoView = targetService => {

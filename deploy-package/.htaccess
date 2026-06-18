@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Legacy uppercase folders
+RewriteRule ^Behandlingar/?$ /behandlingar/ [R=301,L]
+RewriteRule ^Terapeutar/?$ /terapeutar/ [R=301,L]
+RewriteRule ^Timebestilling/?$ /timebestilling/ [R=301,L]
+RewriteRule ^Fasilitetar/?$ /fasilitetar/ [R=301,L]
+RewriteRule ^Fysioavdeling/?$ /fysioavdeling/ [R=301,L]
+RewriteRule ^Lokale/?$ /lokale/ [R=301,L]
+RewriteRule ^Treningsstudio/?$ /treningsstudio/ [R=301,L]
+RewriteRule ^Kontakt/?$ /kontakt/ [R=301,L]
+
+# Alternate spellings
+RewriteRule ^behandlinger/?$ /behandlingar/ [R=301,L]
+RewriteRule ^time-bestilling/?$ /timebestilling/ [R=301,L]
+RewriteRule ^timebestilling/?$ /timebestilling/ [R=301,L]
+RewriteRule ^kontakt-oss/?$ /kontakt/ [R=301,L]
+</IfModule>
